@@ -15,7 +15,8 @@ const divide = (g, h) => {
 };
 
 module.exports = {
-sum,
-sub,
-mult,
-divide};
+    sum: sum,
+    sub: sub,
+    mult: mult,
+    divide: divide
+};

@@ -1,7 +1,6 @@
-const sumFx = require('./math');
+const mathObj = require ("./math");
 
-console.log(sumFx.sum(1,2));
-
-const sumFx = require('./math');
-
-console.log(sumFx.sub(4,2));
+console.log(mathObj.sum(2,2));
+console.log(mathObj.sub(4,2));
+console.log(mathObj.mult(2,2));
+console.log(mathObj.divide(4,2));
