@@ -1,37 +1,62 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = 5000
 
 
-let actors = {
+let user = [
 
-};
+    {user: "James", age: "74", state: "Ohio" },
+    {user: "Samantha", age: "37", state: "Florida" },
+    {user: "Harry", age: "52", state: "Texas"},
+    {user: "Jill", age: "45", state: "Georgia"},
 
-let food ={
+]
 
-}
+let food =[
 
-let beverages = {
+    {food: "Pizza"},
+    {food: "Pasta"},
+    {food: "Steak"},
+    {food: "French Fries"},
 
-}
+]
+    
+let drink = [
 
-let sports = {
+    {drink: "Pepsi"},
+    {drink: "Water"},
+    {drink: "Tea"},
+    {drink: "Lemonade"},
 
-}
+]
 
 
-app.get('/', (req, res) => {
-    res.send("actors")
+let game = [
+
+    {game: "Basketball"},
+    {game: "Baseball"},
+    {game: "Football"},
+    {game: "Soccer"},
+
+]
+
+
+app.get('/user', (req, res) => {
+    res.send(user)
 })
 
-app.get('/', (req, res) => {
-    res.send("food")
+app.get('/food', (req, res) => {
+    res.send(food)
 })
 
-app.post('/', (req, res) => {
-    res.send("beverages")
+app.get('/drink', (req, res) => {
+    res.send(drink)
 })
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost${port}`)
+app.get('/game', (req, res) => {
+    res.send(game)
+})
+
+app.listen(PORT, () => {
+    console.log(`Example app listening at ${PORT}`)
 })
