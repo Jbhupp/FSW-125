@@ -1,3 +1,4 @@
+//functions
 const sum = (a, b) => {
     return a + b
 };
@@ -14,9 +15,10 @@ const divide = (g, h) => {
     return g / h
 };
 
+//exporting functions
 module.exports = {
-    sum: sum,
-    sub: sub,
-    mult: mult,
-    divide: divide
+    sum,
+    sub,
+    mult,
+    divide
 };
