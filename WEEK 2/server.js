@@ -1,8 +1,9 @@
+//setting up the port
 const express = require('express')
 const app = express()
 const PORT = 5000
 
-
+//creating the variables for the API to pull data from
 let user = [
 
     {user: "James", age: "74", state: "Ohio" },
@@ -40,7 +41,7 @@ let game = [
 
 ]
 
-
+//creating the get request and user endpoints
 app.get('/user', (req, res) => {
     res.send(user)
 })
