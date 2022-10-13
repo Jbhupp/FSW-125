@@ -42,18 +42,22 @@ let game = [
 ]
 
 //creating the get request and user endpoints
+//GET http://localhost:5000/user
 app.get('/user', (req, res) => {
     res.send(user)
 })
 
+//GET http://localhost:5000/food
 app.get('/food', (req, res) => {
     res.send(food)
 })
 
+//GET http://localhost:5000/drink
 app.get('/drink', (req, res) => {
     res.send(drink)
 })
 
+//GET http://localhost:5000/game
 app.get('/game', (req, res) => {
     res.send(game)
 })
