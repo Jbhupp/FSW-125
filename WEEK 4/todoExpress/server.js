@@ -7,7 +7,7 @@ const shoppingRouter = require('./routes/shopping');
 const todoIntake = require('./routes/todoIntake');
 
 
-const PORT = 5000;
+const PORT = 3000;
 
 app.use(express.json());
 

@@ -2,6 +2,9 @@ const express = require('express');
 const todoListRouter = express.Router();
 const { v4: uuidv4 } = require('uuid');
 
+
+
+//variable for the todoList
 let todoList = [
     { 
     item: "Clean House",  
@@ -57,6 +60,8 @@ let todoList = [
 //         res.send(req.body)
 //     });
 
+
+//get request for product
 todoListRouter.get('/', (req, res) => {
     res.send(todoList)
 });
@@ -81,13 +86,14 @@ todoListRouter.get('/:itemId', (req, res) => {
     res.send(oneItem)
 });
 
+// post request to update the product
 todoListRouter.post('/', (req, res) => {
     const newItem = req.body;
     newItem._id = uuidv4();
     todoList.push(newItem);
 
     console.log(todoList)
-    res.send(`Successfully added ${newItem.item} to the database`);
+    res.send(newItem);
 });
 
 todoListRouter.patch('/', (req, res) => {
@@ -96,6 +102,8 @@ todoListRouter.patch('/', (req, res) => {
     })
 })
 
+//delete request deleting item
+//Endpoint: PUT -http://localhost:5000/todoList/itemid
 todoListRouter.delete('/:itemId', (req, res) => {
     const itemId = req.params.itemId;
     const itemIndex = todoList.findIndex(item => itemId === itemId);
@@ -104,12 +112,21 @@ todoListRouter.delete('/:itemId', (req, res) => {
     res.send('Item successfully deleted.')
 })
 
+
+//put request updating item
+//Endpoint: PUT -http://localhost:5000/todoList/itemid
+
 .put('/:itemId', (req, res) => {
+
+     // Grab the itemId from the URL
     const itemId = req.params.itemId;
     const itemIndex = todoList.findIndex(item => itemId === itemId);
+
+    // Find the array index of the item with the matching _id
     const updateItem = Object.assign(todoList[itemIndex], req.body);
 
-    res.send(`To do item successfully updated!`, updateItem);
+    // Push the updated item into items array where the _id matches
+    res.status(200).send(updateItem);
 })
 
 module.exports = todoListRouter;
