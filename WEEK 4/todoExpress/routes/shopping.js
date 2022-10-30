@@ -4,32 +4,32 @@ const { v4: uuidv4 } = require('uuid');
 
 let shopping = [
     { 
-    item: "Pop",  
+    item: "Paper Towels",  
     priority: "N/A", 
     _id: uuidv4() 
     },
     { 
-    item: "Paper Towels", 
+    item: "Bread", 
     priority: "N/A", 
     _id: uuidv4() 
     },
     { 
-    item: "Grapes", 
+    item: "Milk", 
     priority: "N/A",
      _id: uuidv4() 
     },
     { 
-    item: "Dog Food", 
+    item: "Pizza", 
     priority: "N/A",
     _id: uuidv4() 
     },
     {
-    item: "Paper Plates", 
+    item: "Grapes", 
     priority: "N/A", 
     _id: uuidv4() 
     },
     {
-    item: "Bread", 
+    item: "Lettuce", 
     priority: "N/A",
     _id: uuidv4() 
     },
@@ -77,4 +77,3 @@ shoppingRouter.delete('/:itemId', (req, res) => {
 })
 
 module.exports = shoppingRouter;
-

@@ -4,39 +4,39 @@ const { v4: uuidv4 } = require('uuid');
 
 let todoList = [
     { 
-    item: "Wash Jeep",  
+    item: "Clean House",  
+    priority: "yes", 
+    finishTime: "Wednesday",
+    _id: uuidv4() 
+    },
+    { 
+    item: "Wash Car", 
+    priority: "no",
+    finishTime: "12 pm",  
+    _id: uuidv4() 
+    },
+    { 
+    item: "Grocery Shopping", 
     priority: "yes", 
     finishTime: "Sunday",
-    _id: uuidv4() 
-    },
-    { 
-    item: "Tutor Session", 
-    priority: "yes",
-    finishTime: "Sunday Evening",  
-    _id: uuidv4() 
-    },
-    { 
-    item: "Grocery Trip", 
-    priority: "yes", 
-    finishTime: "Tuesday", 
      _id: uuidv4() 
     },
     { 
-    item: "Start Laundry", 
-    priority: "no",
-    finishTime: "Monday", 
-    _id: uuidv4() 
-    },
-    {
-    item: "Clean House", 
+    item: "Homework", 
     priority: "yes",
-    finishTime: "Wednesday", 
+    finishTime: "Saturday", 
     _id: uuidv4() 
     },
     {
-    item: "Mow Yard", 
+    item: "Mow yard", 
     priority: "no",
-    finishTime: "Thursday",  
+    finishTime: "Friday", 
+    _id: uuidv4() 
+    },
+    {
+    item: "Tutor Session", 
+    priority: "yes",
+    finishTime: "Sunday", 
     _id: uuidv4() 
     },
 ];
@@ -113,4 +113,3 @@ todoListRouter.delete('/:itemId', (req, res) => {
 })
 
 module.exports = todoListRouter;
-
