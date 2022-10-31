@@ -15,24 +15,24 @@ h1, p {
 }
 .del-btn{
   border-radius: 25px;
-  background-color:rgb(226, 204, 176);
+  background-color:red;
   margin-left: 350px;
   width: 75px
 }
 .add-btn{
     border-radius: 25px;
-    background-color: rgb(226, 204, 176);
+    background-color: red;
     width: 75px
 }
 .edit-btn{
   border-radius: 25px;
-  background-color: aquamarine;
+  background-color: yellow;
   margin-left: 25px;
   width: 75px
 }
 .close-btn{
   border-radius: 25px;
-  background-color: aquamarine;
+  background-color: yellow;
   margin-left: 25px;
   width: 75px
 }
@@ -46,6 +46,6 @@ form{
 input{
   margin: 2px;
   border-radius: 5px;
-  background-color: honeydew;
+  background-color:whitesmoke;
   justify-content: center;
 }
