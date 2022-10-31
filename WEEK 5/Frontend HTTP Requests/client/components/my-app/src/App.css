@@ -1,0 +1,51 @@
+h1, p {
+  margin: 5px;
+  justify-content: center;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  margin: 0 32px;
+}
+.items{
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 5px;
+  justify-content: center;
+}
+.del-btn{
+  border-radius: 25px;
+  background-color:rgb(226, 204, 176);
+  margin-left: 350px;
+  width: 75px
+}
+.add-btn{
+    border-radius: 25px;
+    background-color: rgb(226, 204, 176);
+    width: 75px
+}
+.edit-btn{
+  border-radius: 25px;
+  background-color: aquamarine;
+  margin-left: 25px;
+  width: 75px
+}
+.close-btn{
+  border-radius: 25px;
+  background-color: aquamarine;
+  margin-left: 25px;
+  width: 75px
+}
+form{
+  margin: 5px;
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
+  justify-content: center;
+}
+input{
+  margin: 2px;
+  border-radius: 5px;
+  background-color: honeydew;
+  justify-content: center;
+}
