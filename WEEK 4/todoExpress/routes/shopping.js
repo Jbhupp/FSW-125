@@ -35,16 +35,20 @@ let shopping = [
     },
 ];
 
+// Get All items
+// Endpoint: GET - http://localhost3000/shopping
 shoppingRouter.get('/', (req, res) => {
     res.send(shopping)
 });
 
+// Endpoint: GET - http://localhost3000/shopping/itemId
 shoppingRouter.get('/:itemId', (req, res) => {
     const itemId = req.params.itemId;
     const oneItem = shopping.find(item => item_id === itemId)
     res.send(shopping)
 });
 
+// Endpoint: GET - http://localhost3000/shopping/newItem
 shoppingRouter.post('/', (req, res) => {
     const newItem = req.body;
     newItem._id = uuidv4();
@@ -54,12 +58,14 @@ shoppingRouter.post('/', (req, res) => {
     res.send(`Successfully added ${newItem.item} to the database`);
 });
 
+//updating the item list
 shoppingRouter.patch('/', (req, res) => {
     res.status(200).json({
         message : 'Successfully updated product.'
     })
 })
 
+//deleting item from list
 shoppingRouter.delete('/:itemId', (req, res) => {
     const itemId = req.params.itemId;
     const itemIndex = shopping.findIndex(item => item._id === itemId);
@@ -68,6 +74,7 @@ shoppingRouter.delete('/:itemId', (req, res) => {
     res.send('Item successfully deleted.')
 })
 
+//updating item list
 .put('/:itemId', (req, res) => {
     const itemId = req.params.itemId;
     const itemIndex = shopping.findIndex(item => item._id === itemId);

@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 
 
 
-//variable for the todoList
+//create an array of todoList 
 let todoList = [
     { 
     item: "Clean House",  
@@ -61,11 +61,13 @@ let todoList = [
 //     });
 
 
-//get request for product
+//get all todoList
+//endpoint: get - http://localhost:3000/todoList/:itemId
 todoListRouter.get('/', (req, res) => {
     res.send(todoList)
 });
 
+//endpoint: get - http://localhost:3000/todoList/search
 todoListRouter.get('/search/finishTime', (req, res) => {
     const finishTimeSearch = req.query.finishTime;
     const filteredfinishTime = todoList.filter(item => item.finishTime === finishTimeSearch );
@@ -73,6 +75,7 @@ todoListRouter.get('/search/finishTime', (req, res) => {
     res.send(filteredfinishTime)
 });
 
+//endpoint: get - http://localhost:3000/todoList/priority
 todoListRouter.get('/search/priority', (req, res) => {
     const prioritySearch = req.query.priority;
     const filteredpriority = todoList.filter(item => item.priority === prioritySearch );
@@ -80,6 +83,7 @@ todoListRouter.get('/search/priority', (req, res) => {
     res.send(filteredpriority)
 });
 
+//endpoint: get - http://localhost:3000/todoList/search
 todoListRouter.get('/:itemId', (req, res) => {
     const itemId = req.params.itemId;
     const oneItem = todoList.find(item => itemId === itemId)
@@ -103,7 +107,7 @@ todoListRouter.patch('/', (req, res) => {
 })
 
 //delete request deleting item
-//Endpoint: PUT -http://localhost:5000/todoList/itemid
+//Endpoint: PUT -http://localhost:3000/todoList/itemid
 todoListRouter.delete('/:itemId', (req, res) => {
     const itemId = req.params.itemId;
     const itemIndex = todoList.findIndex(item => itemId === itemId);
@@ -114,7 +118,7 @@ todoListRouter.delete('/:itemId', (req, res) => {
 
 
 //put request updating item
-//Endpoint: PUT -http://localhost:5000/todoList/itemid
+//Endpoint: PUT -http://localhost:3000/todoList/itemid
 
 .put('/:itemId', (req, res) => {
 
