@@ -8,7 +8,7 @@ const {v4: uuidv4} = ('uuid');
 const recycledRouter= require('./routes/recycledRouter')
 const itemIntake = require('./routes/itemIntake')
 
-const PORT = 5000
+const PORT = 3000
 
 //application level middleware
 app.use(express.json());
@@ -18,7 +18,7 @@ app.use('/recycledItems', recycledRouter);
 
 app.use('/itemIntake', itemIntake);
 
-
+//app listener
 app.listen(PORT, () => {
     console.log(`App started on port: ${PORT}`)
 })

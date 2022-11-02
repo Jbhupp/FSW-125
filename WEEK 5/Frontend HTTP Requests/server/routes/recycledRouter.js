@@ -15,11 +15,14 @@ let recycledItems = [
 
 ];
 
-//get request for product
+// Get All items
+// Endpoint: GET - http://localhost:3000/recycledItems
+
 recycledRouter.get('/', (req, res) => {
     res.send(recycledItems)
 });
 
+// Endpoint: GET - http://localhost:3000/recycledItems/itemId
 recycledRouter.get('/:itemId', (req, res) => {
     const itemId = req.params.itemId;
     const oneItem = recycledItems.find(item => itemId === itemId);
@@ -27,6 +30,7 @@ recycledRouter.get('/:itemId', (req, res) => {
 });
 
 // post request to update the product
+// Endpoint: GET - http://localhost:3000/recycledItems/newItem
 recycledRouter.post('/', (req, res) => {
     const newItem = req.body;
     newItem._id = uuidv4();
@@ -37,14 +41,15 @@ recycledRouter.post('/', (req, res) => {
 });
 
 //update the product
-
+// Endpoint: GET - http://localhost:3000/recycledItems
 recycledRouter.patch('/', (req, res) => {
     res.status(200).json({
         message : 'Successfully updated product.'
     })
 })
 
-//delete product 
+//delete product
+ // Endpoint: GET - http://localhost:3000/recycledItems/itemId
 recycledRouter.delete('/:itemId', (req, res) => {
     const itemId = req.params.itemId;
     const itemIndex = recycledItems.findIndex(item => item._id === itemId);
@@ -54,7 +59,7 @@ recycledRouter.delete('/:itemId', (req, res) => {
 })
 
 //put request updating item
-//Endpoint: PUT -http://localhost:5000/recycledItems/itemid
+//Endpoint: PUT -http://localhost:3000/recycledItems/itemid
 
 .put('/:itemId', (req, res) => {
     console.log("updated item")
