@@ -8,7 +8,7 @@ const {v4: uuidv4} = ('uuid');
 const recycledRouter= require('./routes/recycledRouter')
 const itemIntake = require('./routes/itemIntake')
 
-const PORT = 3000
+const PORT = 5000
 
 //application level middleware
 app.use(express.json());
