@@ -1,0 +1,59 @@
+h1, p {
+  margin: 5px;
+  justify-content: center;
+  font-weight: bold;
+  
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  margin: 0 32px;
+  background-image: url(https://media.istockphoto.com/id/1177403911/vector/vector-recycling-arrows-with-the-earth-planet.jpg?s=612x612&w=0&k=20&c=rDwhuNL-sROQSr8WxcBVICXLCcupyXgTFQJfLMMdF84=);
+ background-position: center;
+}
+.items{
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 5px;
+  justify-content: center;
+}
+.del-btn{
+  border-radius: 25px;
+  background-color:red;
+  margin-left: 350px;
+  width: 75px;
+  color: ghostwhite;
+}
+.add-btn{
+    border-radius: 25px;
+    background-color: red;
+    width: 75px;
+    color: ghostwhite;
+    
+}
+.edit-btn{
+  border-radius: 25px;
+  background-color: blue;
+  margin-left: 25px;
+  width: 75px;
+  color: ghostwhite;
+}
+.close-btn{
+  border-radius: 25px;
+  background-color:white;
+  margin-left: 25px;
+  width: 75px
+}
+form{
+  margin: 5px;
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
+  justify-content: center;
+}
+input{
+  margin: 2px;
+  border-radius: 5px;
+  background-color:whitesmoke;
+  justify-content: center;
+}
