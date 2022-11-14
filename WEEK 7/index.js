@@ -3,8 +3,13 @@ const app = express();
 const morgan = require('morgan');
 const cors = require('cors');
 
+//cross origin resource sharing
 app.use(cors());
+
+// Middleware : parse the body of the request
 app.use(express.json());
+
+//logging errors
 app.use(morgan('dev'));
 
 //Pulling in the routes

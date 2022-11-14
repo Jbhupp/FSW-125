@@ -2,7 +2,7 @@ const express = require("express");
 const trackEvents = express.Router();
 const { v4: uuidv4 } = require('uuid');
 
-
+//declaring const for events
 const events = [
     {
         event: "Vehicle Oil Change",
@@ -39,6 +39,7 @@ const events = [
 ];
 
 //Get & Post
+// Endpoint: GET - http://localhost:3000/events
 trackEvents.route("/")
     .get((req, res) => {
         res.status(200)
@@ -52,6 +53,7 @@ trackEvents.route("/")
 });
 
 //Get One
+// Endpoint: GET - http://localhost:3000/items/eventId
 trackEvents.get("/:eventId", (req, res, next) => {
     const eventId = req.params.eventId
     const foundEvent = events.find(event => event._id === eventId)
@@ -64,6 +66,7 @@ trackEvents.get("/:eventId", (req, res, next) => {
 })
 
 //Delete
+// Endpoint: GET - http://localhost:3000/items/eventId
 trackEvents.delete("/:eventId", (req, res) => {
     const eventId = req.params.eventId
     const event = req.body
@@ -74,6 +77,7 @@ trackEvents.delete("/:eventId", (req, res) => {
 })
 
 //Update - Put
+// Endpoint: GET - http://localhost:3000/items/eventId
 trackEvents.put("/:eventId", (req, res) => {
     const eventId = req.params.eventId
     const event = req.body
@@ -83,4 +87,5 @@ trackEvents.put("/:eventId", (req, res) => {
     res.status(201).send(updatedEvent)
 })
 
+//export trackEvents
 module.exports = trackEvents;
